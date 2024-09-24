@@ -19,7 +19,7 @@ The key function in this notebook is `extract_profile`, which processes a given 
 
 1. **Profile Extraction**:
    - Extracts a profile from the dataset based on `ProfileID` and `Date`.
-   - Filters elevation values between 0 and 10 units for analysis.
+   - Filters elevation values between 0 and 10 units for analysis. You can change the upper value (here 10) based on your datasets.
    
 2. **Imaginary Line Calculation**:
    - Computes a linear interpolation between the first and last points of the profile to serve as a reference for concavity analysis.
@@ -28,14 +28,15 @@ The key function in this notebook is `extract_profile`, which processes a given 
    - Identifies points where the profile crosses the imaginary line, which indicates changes in concavity.
 
 4. **Concavity Analysis**:
-   - Calculates concavity values along the profile and plots them.
+   - Calculates concavity values along the profile and plots them. 
    
 5. **Slope Calculation**:
-   - Computes the overall slope of the profile in degrees.
+   - Computes the overall slope of the profile in degrees. Slope was not included in the final PMI calculation, just to look at the profile gradient. 
 
 6. **Segmentwise Analysis**:
    - Divides the profile into segments based on inflection points.
-   - Computes the concavity, percentage, and mean elevation for each segment.
+   - Computes the concavity, percentage, and mean elevation for each segment. Negative values indicate Concave segment, Positive values Convex, and zero indicate Linear 
+     segement. Segment with the mean elevation less than or equal 0.1 m is considered as Linear. Ignore the segment which is less than 10% of the profile. 
 
 ## Data Structure
 
