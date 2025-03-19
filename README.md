@@ -36,7 +36,7 @@ The key function in this notebook is `extract_profile`, which processes a given 
 6. **Segmentwise Analysis**:
    - Divides the profile into segments based on inflection points.
    - Computes the concavity, percentage, and mean elevation for each segment. Negative values indicate Concave segment, Positive values Convex, and zero indicate Linear 
-     segement. Segment with the mean elevation less than or equal 0.1 m is considered as Linear. Ignore the segment which is less than 10% of the profile. 
+     segement. Segment with the mean elevation less than or equal 0.1 m is considered as Linear. Ignore the segment which is less than 1m. 
 
 ## Data Structure
 
